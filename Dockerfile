@@ -58,8 +58,8 @@ RUN yum -y install php55-php-devel gcc && yum clean all && \
 RUN \
   echo zend_extension=xdebug.so >> /opt/rh/php55/root/etc/php.d/xdebug.ini && \
   echo xdebug.remote_enable=1 >> /opt/rh/php55/root/etc/php.d/xdebug.ini && \
-  echo xdebug.remote_connect_back=1 >> /opt/rh/php55/root/etc/php.d/xdebug.ini && \
   echo xdebug.remote_autostart=0 >> /opt/rh/php55/root/etc/php.d/xdebug.ini && \
+  echo xdebug.idekey="PHPSTORM" >> /opt/rh/php55/root/etc/php.d/xdebug.ini && \
   echo xdebug.max_nesting_level=256 >> /opt/rh/php55/root/etc/php.d/xdebug.ini && \
   echo xdebug.remote_log=/var/www/logs/xdebug.log >> /opt/rh/php55/root/etc/php.d/xdebug.ini
 
